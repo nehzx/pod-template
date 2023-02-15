@@ -39,4 +39,10 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+
+  s.test_spec 'Tests' do |tc|
+    tc.source_files = '${POD_NAME}/Tests/**/*'
+    tc.dependency 'OCMock' # This dependency will only be linked with your tests.
+  end  
+  
 end
